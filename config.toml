@@ -1,0 +1,60 @@
+# 应用的配置文件
+
+any_setting = "any_value"
+
+
+[logger]
+
+[detection]
+pose_detect_callback = "https://192.168.0.140/znyj/violation/recognize"
+desk_detect_callback = "https://192.168.0.140/znyj/violation/recognize"
+
+[mqtt]
+server_ip = "192.168.0.213"
+port = 1883
+#订阅主题，如果用户不指定就使用此默认值
+subscribe = "v1/devices/me/telemetry"
+user_name = "admin"
+pass_word = "admin"
+
+[flask]
+flask_ip = "0.0.0.0"
+flask_port = 8506
+
+[mysql]
+host = "192.168.0.140"
+database = "ai_platform"
+user = "root"
+password = "root"
+
+# 配置clip模型
+[clip]
+
+#clip模型的检测类别
+[[clip.classes]]
+#类别名称
+name = "摔倒"
+#检测类型类别
+class = "fall"
+#模型文件
+file = "myclip/models/fallclip.pt"
+#相似度阀值
+similarity_threshold = 0.2
+
+[[clip.classes]]
+name = "打架"
+class = "fight"
+file = "myclip/models/fightclip.pt"
+similarity_threshold = 0.23
+
+[[clip.classes]]
+name = "火焰"
+class = "fire"
+file = "myclip/models/fireclip.pt"
+similarity_threshold = 0.18
+
+[[clip.classes]]
+name = "拥抱"
+class = "hug"
+file = "myclip/models/hugclip.pt"
+similarity_threshold = 0.2

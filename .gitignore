@@ -1,0 +1,14 @@
+__pycache__/
+/log/
+detection_data.db
+/models/
+/default_models
+/temp_compressed*
+/threads_config.json
+/face_threads_config.json
+/clip_threads_config.json
+/runs
+/face/face.db
+face.db
+face_detection_results.db
+.pid
