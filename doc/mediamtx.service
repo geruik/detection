@@ -1,0 +1,31 @@
+######
+# 安装步骤：
+#   - 将 service 文件放到正确的目录
+#       `sudo cp mediamtx.service /etc/systemd/system/`
+#   - 设置文件权限
+#       `sudo chmod 644 /etc/systemd/system/mediamtx.service`
+#   - 重新加载 systemd 配置
+#       `sudo systemctl daemon-reload`
+#   - 设置开机自启
+#       `sudo systemctl enable mediamtx`
+#
+######
+[Unit] 
+# 服务描述 
+Description=mediamtx视频流代理服务
+# 服务依赖于网络             
+Wants=network-online.target
+After=network-online.target 
+ 
+[Service]
+#启动bash脚本必须设定为forking类型 
+Type=forking
+# 服务开启时执行脚本，替换成真正的启动路径
+ExecStart=/home/lenovo/mediamtx/start.sh
+# 启用用户,替换成真正的用户
+User=lenovo
+# 在什么情况下会自动重启
+#Restart=on-failure                     
+ 
+[Install] 
+WantedBy=multi-user.target

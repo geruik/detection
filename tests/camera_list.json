@@ -1,0 +1,26 @@
+{
+    "cameras":{
+        "STREAMS": [
+                    {
+                        "RTSP_URL": "rtsp://192.168.0.213:8554/rtsp/182",
+                        "CAMERA_SN": "182"
+                    },
+                    {
+                        "RTSP_URL": "rtsp://192.168.0.213:8554/rtsp/185",
+                        "CAMERA_SN": "185"
+                    },
+                    {
+                        "RTSP_URL": "rtsp://192.168.0.213:8554/rtsp/183",
+                        "CAMERA_SN": "183"
+                    },
+                    {
+                        "RTSP_URL": "rtsp://192.168.0.213:8554/rtsp/120",
+                        "CAMERA_SN": "120"
+                    },
+                    {
+                        "RTSP_URL": "rtsp://192.168.0.213:8554/rtsp/106",
+                        "CAMERA_SN": "106"
+                    }
+                ]
+    }
+}

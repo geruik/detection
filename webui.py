@@ -20,14 +20,14 @@ def main():
     from pages.page_clip_thread import clip_thread
     #from pages.page_face_thread_results import face_results_show
     st.set_page_config(
-        page_title="为乐AI检测系统",
+        page_title=" AI检测系统",
         page_icon="static/favicon.ico",
         layout="wide",
         initial_sidebar_state="expanded",
         menu_items={
             "Get Help": "https://www.weileit.com",
             "Report a bug": None,
-            "About": "欢迎使用为乐AI检测系统！",
+            "About": "欢迎使用 AI检测系统！",
         },
     )
     # 图标请参考：https://icons.getbootstrap.com/
